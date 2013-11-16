@@ -50,11 +50,7 @@
                :dy dy))))))
 
 (defn angle [dx dy]
-  (let [theta (atan (/ dy dx))
-        theta2 (if (pos? dx)
-                 (- theta)
-                 theta)]
-    theta2))
+  (+ PI (atan2 dy dx)))
 
 (defn draw []
   (background 100)
